@@ -10,10 +10,11 @@ public class CubeBlueMovement : MonoBehaviour {
 	public float playerSpeedOffsetZ;
 	private float zSpeed;
 	private float dummyVar;
+	private Animator animator;
 
 
 	void Start () {
-		
+		animator = GetComponent<Animator>();
 	}//End Start
 	
 
@@ -22,6 +23,14 @@ public class CubeBlueMovement : MonoBehaviour {
 		for (int i = 0; i < 10000000; i++) {
 			dummyVar = (dummyVar * 6) + 5;
 		}
+
+		if(Input.GetButtonDown("Fire2")){
+			Debug.Log("Blue turn right signalled");
+			animator.SetBool("RightTurn", true);
+		}else{
+			animator.SetBool("RightTurn", false);
+		}
+		
 	}//End Update
 
 

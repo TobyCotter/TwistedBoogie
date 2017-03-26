@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 21021186}
   - component: {fileID: 21021185}
   - component: {fileID: 21021189}
+  - component: {fileID: 21021191}
   - component: {fileID: 21021190}
   m_Layer: 0
   m_Name: CubeBlue
@@ -168,9 +169,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 21021184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 499, y: 0.51, z: 10}
+  m_LocalPosition: {x: 499, y: 0.51, z: 15}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
-  m_Children: []
+  m_Children:
+  - {fileID: 289673191}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -201,6 +203,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeedOffsetZ: 17
+--- !u!95 &21021191
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21021184}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3361cadc2a5eac42985067dcbcff400, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &114583868
 Prefab:
   m_ObjectHideFlags: 0
@@ -597,10 +616,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 289673186}
   m_LocalRotation: {x: -0.0033094774, y: -0.002402804, z: 0.000007905445, w: -0.99999166}
-  m_LocalPosition: {x: -1.9297283, y: 4.8160934, z: -30}
-  m_LocalScale: {x: 1.1111104, y: 1.1111109, z: 1.1111104}
+  m_LocalPosition: {x: 0.29249406, y: 4.8160934, z: -17}
+  m_LocalScale: {x: 1.1111103, y: 1.1111109, z: 1.1111103}
   m_Children: []
-  m_Father: {fileID: 801595311}
+  m_Father: {fileID: 21021188}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &460283722
@@ -810,8 +829,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 501, y: 0.51, z: 10}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
-  m_Children:
-  - {fileID: 289673191}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

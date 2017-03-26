@@ -25,9 +25,9 @@ public class CubeRedMovement : MonoBehaviour {
 			TurnRightTrue();
 		}
 
-		if(Input.GetButtonDown("Fire2")){
-			turnSpeed = -turnSpeed;
-		}
+		//if(Input.GetButtonDown("Fire2")){
+		//	turnSpeed = -turnSpeed;
+		//}
 	}
 
 
