@@ -19,7 +19,6 @@ public class CubeBlueMovement : MonoBehaviour {
 	
 
 	void Update () {
-		//zSpeed = (playerSpeedOffsetZ * Time.deltaTime);	//Mistake!!!  The delta time was in the update instead of the fixedUpdate
 		for (int i = 0; i < 10000000; i++) {
 			dummyVar = (dummyVar * 6) + 5;
 		}
@@ -30,12 +29,11 @@ public class CubeBlueMovement : MonoBehaviour {
 		}else{
 			animator.SetBool("RightTurn", false);
 		}
-		
 	}//End Update
 
 
 	void FixedUpdate(){
-		//transform.Translate(0, 0, zSpeed);
-		transform.Translate(Vector3.forward * playerSpeedOffsetZ * Time.deltaTime);
+		//transform.Translate(0, 0, zSpeed);	//Old way
+		//transform.Translate(Vector3.forward * playerSpeedOffsetZ * Time.deltaTime);
 	}//End FixedUpdate
 }
