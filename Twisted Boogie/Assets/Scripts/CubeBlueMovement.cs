@@ -10,30 +10,42 @@ public class CubeBlueMovement : MonoBehaviour {
 	public float playerSpeedOffsetZ;
 	private float zSpeed;
 	private float dummyVar;
-	private Animator animator;
+    private bool rightTurn;
+    private Vector3 pivotPoint;
+    
 
 
 	void Start () {
-		animator = GetComponent<Animator>();
+        
 	}//End Start
 	
 
 	void Update () {
-		for (int i = 0; i < 10000000; i++) {
-			dummyVar = (dummyVar * 6) + 5;
-		}
-
-		if(Input.GetButtonDown("Fire2")){
-			Debug.Log("Blue turn right signalled");
-			animator.SetBool("RightTurn", true);
-		}else{
-			animator.SetBool("RightTurn", false);
-		}
+		
 	}//End Update
 
 
 	void FixedUpdate(){
-		//transform.Translate(0, 0, zSpeed);	//Old way
-		//transform.Translate(Vector3.forward * playerSpeedOffsetZ * Time.deltaTime);
+        float turnAngle;
+
+        if (!rightTurn)
+        {
+            transform.Translate(Vector3.forward * playerSpeedOffsetZ * Time.deltaTime);
+        }
+        else
+        {
+            turnAngle = 300 * Time.deltaTime;
+            // transform.RotateAround(pivotPoint, Vector3.up, turnAngle);
+            
+            transform.Rotate(Vector3.up, 10000, Space.World);
+        }
 	}//End FixedUpdate
+
+
+    void OnTriggerEnter(Collider collider) {
+        Debug.Log("We collided with:" + collider);
+
+        pivotPoint = collider.transform.position;
+        rightTurn = true;
+    }//End OnTriggerEnter
 }
