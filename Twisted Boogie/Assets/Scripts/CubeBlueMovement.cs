@@ -8,9 +8,10 @@ using UnityEngine;
 public class CubeBlueMovement : MonoBehaviour {
 	//Variables
 	public float playerSpeedOffsetZ;
+	public Transform myPivot;
 	private float zSpeed;
 	private float dummyVar;
-    private bool rightTurn;
+    private bool rightTurn = true;
     private Vector3 pivotPoint;
     
 
@@ -26,26 +27,26 @@ public class CubeBlueMovement : MonoBehaviour {
 
 
 	void FixedUpdate(){
-        float turnAngle;
+        //float turnAngle;
 
-        if (!rightTurn)
-        {
-            transform.Translate(Vector3.forward * playerSpeedOffsetZ * Time.deltaTime);
-        }
-        else
-        {
-            turnAngle = 300 * Time.deltaTime;
-            // transform.RotateAround(pivotPoint, Vector3.up, turnAngle);
-            
-            transform.Rotate(Vector3.up, 10000, Space.World);
-        }
+        //if (!rightTurn)
+        //{
+        //    transform.Translate(Vector3.forward * playerSpeedOffsetZ * Time.deltaTime);
+        //}
+        //else
+        //{
+        //    turnAngle = 300 * Time.deltaTime;
+            //transform.RotateAround(pivotPoint, Vector3.up, 1);
+            transform.RotateAround(myPivot.transform.position, Vector3.up, 1);
+            //transform.Rotate(Vector3.up, 10000, Space.World);
+        //}
 	}//End FixedUpdate
 
 
-    void OnTriggerEnter(Collider collider) {
-        Debug.Log("We collided with:" + collider);
+    //void OnTriggerEnter(Collider collider) {
+    //    Debug.Log("We collided with:" + collider);
 
-        pivotPoint = collider.transform.position;
-        rightTurn = true;
-    }//End OnTriggerEnter
+    //    pivotPoint = collider.transform.position;
+    //    rightTurn = true;
+    //}//End OnTriggerEnter
 }

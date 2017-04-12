@@ -32,11 +32,11 @@ public class CubeRedMovement : MonoBehaviour {
 
 
 	void FixedUpdate(){
-		thisRigidBody.MovePosition(transform.position + transform.forward * playerSpeedOffsetZ * Time.deltaTime);
-
 		//Turn Right?
 		if(turnRightTrue){
 			TurnRight();
+		}else{
+			thisRigidBody.MovePosition(transform.position + transform.forward * playerSpeedOffsetZ * Time.deltaTime);
 		}
 	}//End FixedUpdate()
 
@@ -48,10 +48,10 @@ public class CubeRedMovement : MonoBehaviour {
 
 
 	private void TurnRight(){
-		float turn = turnSpeed * Time.deltaTime;
+		//float turn = turnSpeed * Time.deltaTime;
 
 		//Rotate around y axis
-		Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
+		Quaternion turnRotation = Quaternion.Euler(0f, turnSpeed * Time.deltaTime, 0f);
 
 		//Rotate
 		thisRigidBody.MoveRotation(thisRigidBody.rotation * turnRotation);
