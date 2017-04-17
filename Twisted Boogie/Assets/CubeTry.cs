@@ -8,7 +8,7 @@ public class CubeTry : MonoBehaviour {
 	public float turnSpeed;
 	private bool rightTurn;
 	private float reach90;
-
+	private Vector3 colliderPivot;
 
 
 	void Start () {
@@ -25,7 +25,8 @@ public class CubeTry : MonoBehaviour {
 		if (reach90 < 90.0f && rightTurn) {
         	reach90 += (turnSpeed * Time.deltaTime);
         	Debug.Log("Turnspeed * delta: " + reach90);
-            transform.RotateAround(myPivot.transform.position, Vector3.up, turnSpeed * Time.deltaTime);
+        	//*** TURN HERE ***
+           transform.RotateAround(colliderPivot, Vector3.up, turnSpeed * Time.deltaTime);
         }
 
         if(reach90 >= 90.0f && rightTurn){
@@ -44,5 +45,6 @@ public class CubeTry : MonoBehaviour {
 	void OnTriggerEnter(Collider collider) {
     	Debug.Log("We collided with:" + collider);
     	rightTurn = true;
+    	colliderPivot = collider.transform.position;
     }//End OnTriggerEnter
 }

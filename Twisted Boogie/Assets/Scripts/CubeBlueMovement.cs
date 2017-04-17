@@ -11,7 +11,7 @@ public class CubeBlueMovement : MonoBehaviour {
 	public Transform myPivot;
 	private float zSpeed;
 	private float dummyVar;
-    private bool rightTurn = true;
+    //private bool rightTurn = true;
     private Vector3 pivotPoint;
     
 

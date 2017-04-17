@@ -55,6 +55,3 @@ C:\Users\User\Documents\Unity MyGames\5.5.2f1\Twisted Boogie\Twisted Boogie\Temp
 C:\Users\User\Documents\Unity MyGames\5.5.2f1\Twisted Boogie\Twisted Boogie\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\Unity MyGames\5.5.2f1\Twisted Boogie\Twisted Boogie\obj\Debug\Assembly-CSharp-Editor-firstpass.dll
 C:\Users\User\Documents\Unity MyGames\5.5.2f1\Twisted Boogie\Twisted Boogie\obj\Debug\Assembly-CSharp-Editor-firstpass.pdb
-C:\Users\User\Documents\Unity MyGames\5.5.2f1\Twisted Boogie\Twisted Boogie\Temp\bin\Debug\SyntaxTree.VisualStudio.Unity.Bridge.dll
-C:\Users\User\Documents\Unity MyGames\5.5.2f1\Twisted Boogie\Twisted Boogie\Temp\bin\Debug\SyntaxTree.VisualStudio.Unity.Messaging.dll
-C:\Users\User\Documents\Unity MyGames\5.5.2f1\Twisted Boogie\Twisted Boogie\Temp\bin\Debug\SyntaxTree.Mono.Cecil.dll
