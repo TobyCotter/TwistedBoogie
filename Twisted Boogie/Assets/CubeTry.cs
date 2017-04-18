@@ -24,7 +24,6 @@ public class CubeTry : MonoBehaviour {
 	void FixedUpdate(){
 		if (reach90 < 90.0f && rightTurn) {
         	reach90 += (turnSpeed * Time.deltaTime);
-        	Debug.Log("Turnspeed * delta: " + reach90);
         	//*** TURN HERE ***
            transform.RotateAround(colliderPivot, Vector3.up, turnSpeed * Time.deltaTime);
         }
