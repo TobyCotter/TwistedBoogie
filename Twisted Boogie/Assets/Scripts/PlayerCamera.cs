@@ -19,12 +19,18 @@ public class PlayerCamera : MonoBehaviour {
 	
 
 
-	void LateUpdate(){
+	void FixedUpdate(){
 		Vector3 camOffset = new Vector3(xOffset, yOffset, zOffset);
 		Vector3 desiredPos = targetObj.transform.position + camOffset;
 
+		//Follow Player
 		//transform.position = Vector3.Lerp(transform.position, desiredPos, (lerpSpeed * Time.deltaTime));
 		transform.position = Vector3.SmoothDamp(transform.position, desiredPos, ref velocity, smoothTime);
+
+		//Rotate with player
+		Vector3 relativePos = targetObj.position - transform.position;
+		Quaternion rotation = Quaternion.LookRotation(relativePos);
+		transform.rotation = rotation;
 	}
 
 	private void LerpCamera(){
