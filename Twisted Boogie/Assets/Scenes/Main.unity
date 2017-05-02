@@ -1069,6 +1069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObj: {fileID: 1651257441}
   smoothTime: 0.3
+  rotateSpeed: 0.125
 --- !u!1001 &1251495756
 Prefab:
   m_ObjectHideFlags: 0
