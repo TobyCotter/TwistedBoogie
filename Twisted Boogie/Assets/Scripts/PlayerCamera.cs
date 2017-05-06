@@ -5,13 +5,19 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour {
 	//Variables
 	public Transform targetObj;
-	[SerializeField] private float smoothTime = 0.3f;									//Used in SmoothDamp the transform.position
-	[SerializeField] private float rotateSpeed;
+
 	private Vector3 velocity = Vector3.zero;
+
+	[Tooltip("Higher number makes camera's speed lag more")] 
+	[SerializeField] private float smoothTime = 0.3f;				//Camera speed lag
+	[Range(0.0f, 1.0f)]
+	[Tooltip("Lower number makes camera's rotation lag more")]
+	[SerializeField] private float rotateSpeed = .125f;				//Camera rotation lag
+
 
 	
 	void Start () {
-		//camOffset = targetObj.transform.position - this.transform.position;
+
 	}
 
 	void FixedUpdate(){
